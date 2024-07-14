@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "chore-master-web"
+		},
+		{
+			"path": "chore-master-python"
+		}
+	],
+	"settings": {}
+}
