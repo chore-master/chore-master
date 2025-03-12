@@ -1,0 +1,17 @@
+name: chore_master_production
+services:
+  web_server:
+    build:
+      context: ../chore-master-python
+      dockerfile: ./apps/chore_master_api/deployments/web_server/Dockerfile
+    environment:
+      ENV: 'production'
+      SERVICE_NAME: 'chore_master_api'
+      COMPONENT_NAME: 'web_server'
+      PORT: 8080
+      DATABASE_ORIGIN: 'sqlite+aiosqlite:///./dbs/production.db'
+      DATABASE_SCHEMA_NAME: ''
+    ports:
+      - 13000:8080
+    volumes:
+      - ../dbs:/app/chore-master-python/dbs

@@ -10,8 +10,3 @@ git submodule update --init --recursive
 sudo docker compose -f ./deployments/docker-compose.production.yml up -d --build
 sudo docker compose -f ./deployments/docker-compose.production.yml down
 ```
-
-## Todo
-
-- Local MongoDB
-- Auth
