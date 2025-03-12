@@ -1,6 +1,6 @@
 name: chore_master_production
 services:
-  web_server:
+  chore_master_api_web_server:
     build:
       context: ../chore-master-python
       dockerfile: ./apps/chore_master_api/deployments/web_server/Dockerfile
@@ -15,3 +15,14 @@ services:
       - 13000:8080
     volumes:
       - ../dbs:/app/chore-master-python/dbs
+  end_user_app:
+    build:
+      context: ../chore-master-web
+      dockerfile: ./deployments/end_user_app/Dockerfile
+      args:
+        NEXT_PUBLIC_ENV_NAME: 'production'
+        NEXT_PUBLIC_CHORE_MASTER_API_HOST: 'http://localhost:13000'
+    environment:
+      PORT: 8888
+    ports:
+      - 8888:8888
