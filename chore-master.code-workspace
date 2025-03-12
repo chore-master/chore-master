@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "chore-master",
 			"path": "."
 		},
 		{
+			"name": "chore-master-web",
 			"path": "chore-master-web"
 		},
 		{
+			"name": "chore-master-python",
 			"path": "chore-master-python"
 		}
 	],
