@@ -5,12 +5,13 @@ services:
       context: ../chore-master-python
       dockerfile: ./apps/chore_master_api/deployments/web_server/Dockerfile
     environment:
-      ENV: 'local'
-      SERVICE_NAME: 'chore_master_api'
-      COMPONENT_NAME: 'web_server'
+      ENV: "local"
+      SERVICE_NAME: "chore_master_api"
+      COMPONENT_NAME: "web_server"
       PORT: 8080
-      DATABASE_ORIGIN: 'sqlite+aiosqlite:///./dbs/local.db'
-      DATABASE_SCHEMA_NAME: ''
+      DATABASE_ORIGIN: "sqlite+aiosqlite:///./dbs/local.db"
+      DATABASE_SCHEMA_NAME: ""
+      CLOUDFLARE_TURNSTILE_SECRET_KEY: "1x0000000000000000000000000000000AA"
       FRONTEND_ORIGIN: 'http://localhost:8888'
     ports:
       - 13000:8080
@@ -21,8 +22,8 @@ services:
       context: ../chore-master-web
       dockerfile: ./deployments/end_user_app/Dockerfile
       args:
-        NEXT_PUBLIC_ENV_NAME: 'local'
-        NEXT_PUBLIC_CHORE_MASTER_API_HOST: 'http://localhost:13000'
+        NEXT_PUBLIC_ENV_NAME: "local"
+        NEXT_PUBLIC_CHORE_MASTER_API_HOST: "http://localhost:13000"
     environment:
       PORT: 8888
     ports:
