@@ -16,4 +16,4 @@ sudo docker compose -f ./deployments/docker-compose.production.yml -p chore_mast
 
 請分別參閱子專案的 README 進行開發
 - [Chore Master Python](https://github.com/chore-master/chore-master-python/blob/main/apps/chore_master_api/README.md)
-- [Chore Master Web](https://github.com/chore-master/chore-master-web/tree/main/packages/end-user-app)
+- [Chore Master Web](https://github.com/chore-master/chore-master-web/tree/main/apps/end-user-app)
