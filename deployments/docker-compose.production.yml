@@ -19,7 +19,7 @@ services:
       - ../dbs:/app/chore-master-python/dbs
   end_user_app:
     build:
-      context: ../chore-master-web
+      context: ../chore-master-js
       dockerfile: ./deployments/end_user_app/Dockerfile
       args:
         NEXT_PUBLIC_ENV_NAME: "local"
