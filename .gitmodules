@@ -1,6 +1,6 @@
-[submodule "chore-master-web"]
-	path = chore-master-web
-	url = git@github.com:chore-master/chore-master-web.git
+[submodule "chore-master-js"]
+	path = chore-master-js
+	url = git@github.com:chore-master/chore-master-js.git
 [submodule "chore-master-python"]
 	path = chore-master-python
 	url = git@github.com:chore-master/chore-master-python.git

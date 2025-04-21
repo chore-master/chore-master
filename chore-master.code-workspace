@@ -5,8 +5,8 @@
 			"path": "."
 		},
 		{
-			"name": "chore-master-web",
-			"path": "chore-master-web"
+			"name": "chore-master-js",
+			"path": "chore-master-js"
 		},
 		{
 			"name": "chore-master-python",
